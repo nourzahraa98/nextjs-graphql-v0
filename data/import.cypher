@@ -1,4 +1,4 @@
-CALL apoc.load.json("https://raw.githubusercontent.com/johnymontana/fullstack-graphql-neo4j-auradb-nextjs-vercel-workshop/main/news.json") YIELD value
+CALL apoc.load.json("https://github.com/nourzahraa98/nextjs-graphql-v0/blob/main/data/news.json") YIELD value
 UNWIND value.results AS article
   MERGE (a:Article {url: article.url})
     SET a.title     = article.title,
